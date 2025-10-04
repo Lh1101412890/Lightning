@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Info>
+	<Type>ACD_2023</Type>
+	<Install>"D:\CAD2023\image\Installer.exe" -i deploy --offline_mode --ui_mode basic -o "D:\CAD2023\image\Collection.xml" --installer_version "2.13.2.67"</Install>
+	<Uninstall>"D:\CAD2023\image\Installer.exe" -i uninstall -q --manifest "D:\CAD2023\image\ACD_2023_zh-CN\setup.xml" --extension_manifest "D:\CAD2023\image\ACD_2023_zh-CN\setup_ext.xml"</Uninstall>
+</Info>

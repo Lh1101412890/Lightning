@@ -1,0 +1,16 @@
+﻿<Window x:Class="LightningMessage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LightningMessage"
+        Title="LightningMessage" WindowStyle="None" Background="LightGreen" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="Manual" Topmost="True" SizeToContent="WidthAndHeight" Width="500" Height="25">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="关闭" Click="MenuItem_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Width="500" Height="25">
+        <TextBlock Name="messageBox" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
