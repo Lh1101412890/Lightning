@@ -19,6 +19,9 @@ namespace Lightning.Manager
         /// </summary>
         public string ProductName => Brand + Type.ToString();
 
+        // 项目位置
+        static readonly string local = "D:\\Visual Studio 2022 Projects";
+
         /// <summary>
         /// 错误日志文件路径
         /// </summary>
@@ -40,7 +43,7 @@ namespace Lightning.Manager
             Type = god;
             using (RegistryKey registry = Registry.LocalMachine.OpenSubKey($"Software\\Lightning\\{ProductName}"))
             {
-                BaseDir = registry == null ? $"D:\\Visual Studio 2022 Projects\\{ProductName}\\Data" : registry.GetValue("Folder").ToString();
+                BaseDir = registry == null ? local + $"\\{ProductName}\\Data" : registry.GetValue("Folder").ToString();
             }
         }
 
