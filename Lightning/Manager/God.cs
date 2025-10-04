@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
-using System.Xml;
 
-using Lightning.Extension;
 using Lightning.Information;
 
 using Microsoft.Win32;
