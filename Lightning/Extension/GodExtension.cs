@@ -75,7 +75,7 @@ namespace Lightning.Extension
         /// <param name="message">提示信息</param>
         /// <param name="time">显示时长（秒）</param>
         /// <param name="always">是否一直显示</param>
-        public static void Showmessage(this God god, string message, int time = 0, bool always = false)
+        public static void ShowMessage(this God god, string message, int time = 0, bool always = false)
         {
             Process[] processes = Process.GetProcessesByName("LightningMessage");
             if (processes.Length == 0)

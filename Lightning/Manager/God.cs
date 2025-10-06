@@ -7,7 +7,7 @@ using Microsoft.Win32;
 
 namespace Lightning.Manager
 {
-    public partial class God
+    public class God
     {
         /// <summary>
         /// "Lightning"
@@ -51,6 +51,5 @@ namespace Lightning.Manager
         /// 是否是机械革命 Mechrevo极光pro16
         /// </summary>
         public static bool IsGod => PCInfo.Guid.ToString() == "cbd95518-368e-4133-9d75-eb9d7ac94af3";
-
     }
 }
