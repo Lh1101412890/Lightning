@@ -77,6 +77,7 @@ namespace Lightning.Extension
         /// <param name="always">是否一直显示</param>
         public static void ShowMessage(this God god, string message, int time = 0, bool always = false)
         {
+            // 启动消息窗口
             Process[] processes = Process.GetProcessesByName("LightningMessage");
             if (processes.Length == 0)
             {

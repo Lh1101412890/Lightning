@@ -30,21 +30,33 @@ namespace LightningMessage
             Top = 0;
             Visibility = Visibility.Hidden;
 
+            // 获取窗口句柄
             HwndSource hwndSource = PresentationSource.FromVisual(this) as HwndSource;
-            //添加窗口重绘消息处理事件
+            // 添加窗口消息处理钩子
             hwndSource?.AddHook(WndProc);
 
             Paint();
         }
 
+        /// <summary>
+        /// 窗口消息处理函数，用于拦截并处理特定的 Windows 消息。
+        /// </summary>
+        /// <param name="hwnd">窗口句柄</param>
+        /// <param name="msg">消息标识</param>
+        /// <param name="wParam">消息参数</param>
+        /// <param name="lParam">消息参数</param>
+        /// <param name="handled">指示消息是否已被处理</param>
+        /// <returns>处理结果指针</returns>
         private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            const int WM_PAINT = 0x000F;
-            // Windows重绘消息
+            const int WM_PAINT = 0x000F; // Windows重绘消息常量
+                                         // 判断是否为重绘消息
             if (msg == WM_PAINT)
             {
+                // 执行自定义绘制逻辑
                 Paint();
             }
+            // 返回 IntPtr.Zero 表示未处理其他消息
             return IntPtr.Zero;
         }
 
