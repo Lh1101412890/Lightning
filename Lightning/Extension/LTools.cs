@@ -39,7 +39,14 @@ namespace Lightning.Extension
             _Free(p);
         }
 
-        public static void XCopy(DirectoryInfo original, DirectoryInfo target, string ext, bool hasDir)
+        /// <summary>
+        /// 将original目录下的所有指定后缀名的文件复制到target目录下
+        /// </summary>
+        /// <param name="original"></param>
+        /// <param name="target">目标位置</param>
+        /// <param name="ext">例如".dll"，默认为"*"</param>
+        /// <param name="IncludingChildren">是否包括所有子文件夹</param>
+        public static void XCopy(DirectoryInfo original, DirectoryInfo target, string ext = "*", bool IncludingChildren = true)
         {
             foreach (FileInfo file in original.GetFiles())
             {
@@ -48,7 +55,7 @@ namespace Lightning.Extension
                     file.CopyTo(new FileInfo(target.FullName + "\\" + file.Name));
                 }
             }
-            if (!hasDir)
+            if (!IncludingChildren)
             {
                 return;
             }

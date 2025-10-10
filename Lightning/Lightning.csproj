@@ -58,7 +58,6 @@
     <Compile Include="Extension\DoubleExtension.cs" />
     <Compile Include="Extension\ExceptionExtension.cs" />
     <Compile Include="Extension\FileInfoExtension.cs" />
-    <Compile Include="Extension\GodExtension.cs" />
     <Compile Include="Extension\HttpClientExtension.cs" />
     <Compile Include="Extension\IDisposableExtension.cs" />
     <Compile Include="Extension\IntPtrExtension.cs" />

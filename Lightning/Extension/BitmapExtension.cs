@@ -9,10 +9,10 @@ namespace Lightning.Extension
     public static class BitmapExtension
     {
         /// <summary>
-        /// 重新设置imageSource的尺寸
+        /// 指定imageSource的尺寸
         /// </summary>
         /// <param name="imageSource"></param>
-        /// <param name="size"></param>
+        /// <param name="size">size * size</param>
         /// <returns></returns>
         public static ImageSource Resize(this ImageSource imageSource, int size)
         {
@@ -28,7 +28,7 @@ namespace Lightning.Extension
         }
 
         /// <summary>
-        /// 重新设置imageSource的宽度，高度随比例调整
+        /// 指定imageSource的宽度，高度随比例调整
         /// </summary>
         /// <param name="imageSource"></param>
         /// <param name="width"></param>
@@ -48,7 +48,7 @@ namespace Lightning.Extension
         }
 
         /// <summary>
-        /// 重新设置imageSource的宽度，高度随比例调整
+        /// 指定imageSource的高度，宽度随比例调整
         /// </summary>
         /// <param name="imageSource"></param>
         /// <param name="height"></param>

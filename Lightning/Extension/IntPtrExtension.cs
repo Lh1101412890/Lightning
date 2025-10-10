@@ -41,15 +41,6 @@ namespace Lightning.Extension
             SendMessage_Inner(hwnd, Msg, wParam, lParam);
         }
 
-        /// <summary>
-        /// 向窗口发送PAINT消息
-        /// </summary>
-        /// <param name="hwnd">接收窗口句柄</param>
-        public static void Send_PAINT(this IntPtr hwnd)
-        {
-            const int WM_PAINT = 0x000F;
-            SendMessage_Inner(hwnd, WM_PAINT, IntPtr.Zero, IntPtr.Zero);
-        }
     }
 
     public partial class IntPtrExtension
