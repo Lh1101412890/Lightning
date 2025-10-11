@@ -19,8 +19,11 @@ namespace LightningMessage
             SourceInitialized += MessageView_SourceInitialized;
             MouseLeftButtonUp += (s, e) =>
             {
-                Process.Start("Explorer", "https://space.bilibili.com/191930682");
-                ShowMessage("", 0);
+                if (ReadMessage().Message == "Lightning插件作者：【不要干施工】，点击去b站充电，插件群：785371506！")
+                {
+                    Process.Start("Explorer", "https://space.bilibili.com/191930682");
+                    ShowMessage("", 0);
+                }
             };
         }
 
@@ -174,7 +177,10 @@ namespace LightningMessage
             });
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e) => this.Close();
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 
     internal class MessageStruct
