@@ -153,7 +153,7 @@ namespace Lightning.Manager
                 registry.Close();
             }
 
-            IntPtr intPtr = LTools.FindMessageWindow();
+            IntPtr intPtr = ImportExtension.FindWindow(null, "LightningMessage");
             // 发送PAINT消息让窗口刷新
             int WM_PAINT = 0x000F;
             intPtr.SendMessage(WM_PAINT, IntPtr.Zero, IntPtr.Zero);
@@ -162,6 +162,5 @@ namespace Lightning.Manager
         private GodEnum Type { get; }
 
         private string BaseDir { get; }
-
     }
 }

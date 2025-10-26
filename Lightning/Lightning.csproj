@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,7 +61,10 @@
     <Compile Include="Extension\FileInfoExtension.cs" />
     <Compile Include="Extension\HttpClientExtension.cs" />
     <Compile Include="Extension\IDisposableExtension.cs" />
+    <Compile Include="Extension\ImportExtension.cs" />
     <Compile Include="Extension\IntPtrExtension.cs" />
+    <Compile Include="Extension\KeyboardHook.cs" />
+    <Compile Include="Extension\KeyboardHookStruct.cs" />
     <Compile Include="Extension\LongExtension.cs" />
     <Compile Include="Extension\LTools.cs" />
     <Compile Include="Extension\WindowExtension.cs" />
