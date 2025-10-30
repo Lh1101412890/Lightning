@@ -109,7 +109,7 @@ namespace Lightning.Extension
         [DllImport("user32.dll", EntryPoint = "SendMessageW", CharSet = CharSet.Auto)]
         private static extern IntPtr SendMessage_Inner(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
-        // 使用WINDOWS API函数代替获取当前实例的函数,防止钩子失效
+        // 使用WINDOWS API函数获取模块的句柄
         [DllImport("kernel32.dll", EntryPoint = "GetModuleHandleW")]
         private static extern IntPtr GetModuleHandle_Inner(string name);
 
